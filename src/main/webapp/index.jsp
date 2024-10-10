@@ -32,7 +32,19 @@
 <p> <a href="4-6">예제 4-6</a></p>
 <p> <a href="4-7">예제 4-7</a></p>
 <p> <a href="4-8">예제 4-8</a></p>
+<p> <a href="4-9">예제 4-9</a></p>
+<p> <a href="4-10">예제 4-10</a></p>
+<p> <a href="4-11">예제 4-11</a></p>
+<form action="4-0" method="get">
+	<input type="text" name="id" /> <br>
+	<input type="text" name="name" />
+	<input type="submit" value="전송"/>
+</form>
 
+<% String id="itedu";
+	String name="아이티에듀넷";
+%>
+<p> <a href="4-0?id=${id}&name=${name}">예제 4-0</a></p>
 
 
 </body>
