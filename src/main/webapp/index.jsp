@@ -43,5 +43,17 @@
 </form>
 <p> <a href="5-2">예제 5-2</a>
 <p> <a href="5-3">예제 5-3</a>
+<p> 예제 5-4 </p>
+<form action="5-4" method="get">
+	<p> 아이디 : <input type="text" name="id">
+	<p> 비밀번호 : <input type="text" name="passwd">
+	<p> <input type="submit" value="전송" />
+<p> <a href="5-5">예제 5-5</a>
+<p> <a href="5-7">예제 5-7</a>
+<p> <a href="5-8">예제 5-8</a>
+<p> <a href="6-1">예제 6-1</a>
+<p> <a href="7-1">예제 7-1</a>
+<p> <a href="7-2">예제 7-2</a>
+<p> <a href="7-3">예제 7-3</a>
 </body>
 </html>
