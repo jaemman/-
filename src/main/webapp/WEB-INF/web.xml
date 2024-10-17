@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee"  xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"   id="WebApp_ID" version="5.0">
+	
+	<!-- 어떤 그룹의? :보안적용 그룹 지정 -->
+	
+	<security-role>
+	
+	<!-- 누구를? -->
+	
+		<role-name>manager</role-name>
+	</security-role>
+	
+	<!-- 어떤 URL을 검사할것인지 지정(검사대상) -->
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>JSPBook</web-resource-name>
+			<url-pattern>/10-3</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<description></description>
+			<role-name>manager</role-name>
+		</auth-constraint>
+	</security-constraint>
+	 
+	 <!--  누구인지 검사 방법 지정 -->
+	 
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/chapter10/login.jsp</form-login-page>
+			<form-error-page>/chapter10/login_failed.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+	
+	
   <display-name>jspbook</display-name>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
