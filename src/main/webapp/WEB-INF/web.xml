@@ -1,5 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee"  xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"   id="WebApp_ID" version="5.0">
+	<!-- 
+	<error-page>
+		<error-code>404</error-code>
+		<location>/chapter11/errcode_404.jsp</location>
+	</error-page>
+	
+	<error-page>
+		<error-code>500</error-code>
+		<location>/chapter11/errcode_500.jsp</location>
+	</error-page>
+	
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/chapter11/exceptiontype_error.jsp</location>
+		
+	</error-page>
+	 -->
 	
 	<!-- 어떤 그룹의? :보안적용 그룹 지정 -->
 	
@@ -32,6 +50,15 @@
 			<form-error-page>/chapter10/login_failed.jsp</form-error-page>
 		</form-login-config>
 	</login-config>
+	
+	<filter>
+		<filter-name>Filter01</filter-name>
+		<filter-class>chapter12.filter.authenfilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Filter01</filter-name>
+		<url-pattern>/12-1</url-pattern>
+	</filter-mapping>
 	
 	
   <display-name>jspbook</display-name>
