@@ -8,7 +8,14 @@
 </head>
 <body>
 
-	값은<%= request.getAttribute("name") %> 이다
+	<%
+		session=request.getSession(false);
+		String id=(String)session.getAttribute("id");
+		String pw=(String)session.getAttribute("pw");
+	%>
+	
+	<%=id %> <br>
+	<%=pw %>
 	
 </body>
 </html>

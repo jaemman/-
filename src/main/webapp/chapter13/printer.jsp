@@ -7,8 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	값은<%= request.getAttribute("name") %> 이다
+	<%
+		session=request.getSession(false);
+		String id=(String)session.getAttribute("id");
+		String pw=(String)session.getAttribute("pw");
+	%>
 	
+	<%=id %> <br>
+	<%=pw %>
+	<a href="13_1">이동하기</a>
 </body>
 </html>

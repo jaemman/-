@@ -7,8 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	값은<%= request.getAttribute("name") %> 이다
+	<form method="post" action="/jspbook/12-3">
+	<p> 아이디:<input type="text" name="id">
+	<p> 비번:<input type="text" name="passwd">
+	<p><input type="submit" value="전송">
 	
+	</form>
 </body>
 </html>
